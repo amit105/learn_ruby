@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'employee/index'
+
   get 'customers/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
