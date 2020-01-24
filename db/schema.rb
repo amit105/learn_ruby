@@ -11,13 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200123185014) do
+ActiveRecord::Schema.define(version: 20200124144234) do
+
+  create_table "animals", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "gender"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.float    "salary"
     t.string   "contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "p_name"
+    t.integer  "price"
+    t.string   "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
